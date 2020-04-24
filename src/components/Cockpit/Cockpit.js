@@ -1,10 +1,12 @@
 import React from "react";
 import './Cockpit.css'
 
-const Cockpit = () => {
+const Cockpit = (props) => {
+    const toggle = props.toggle;
+
     return (
         <div className="Cockpit">
-            <button>Toggle</button>
+            <button onClick={toggle}>Toggle</button>
         </div>
     );
 }

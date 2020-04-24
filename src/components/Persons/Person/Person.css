@@ -1,0 +1,14 @@
+.Person {
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid brown;
+    box-shadow: 2px 2px 10px 1px brown;
+}
+
+.Person > input {
+    height: 25px;
+    border: 1px solid brown;
+    border-radius: 5px;
+    font: inherit;
+}
