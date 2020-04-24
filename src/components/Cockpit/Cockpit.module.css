@@ -1,0 +1,28 @@
+.Cockpit {
+}
+
+.Button {
+    font: inherit;
+    padding: 10px;
+    width: 100px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+}
+
+.NotClicked {
+    background-color: green;
+}
+
+.NotClicked:hover {
+    background-color: rgba(114, 212, 114, 0.91);
+}
+
+.Clicked {
+    background-color: brown;
+}
+
+.Clicked:hover {
+    background-color: rgba(215, 90, 90, 0.84);
+}
