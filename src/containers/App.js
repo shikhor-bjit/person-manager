@@ -30,6 +30,14 @@ class App extends React.Component {
         this.setState({persons: personList});
     }
 
+    updateName = (event, personIndex) => {
+        const personList = [...this.state.persons];
+        const person = personList.find(p => p.id === personIndex);
+        person.name = event.target.value;
+
+        this.setState({persons: personList});
+    }
+
     render = () => (
         <div className="App">
             <h1> {this.props.title} </h1>
@@ -45,7 +53,8 @@ class App extends React.Component {
             personList = (
                 <Persons
                     persons={this.state.persons}
-                    clicked={this.deletePerson}/>
+                    clicked={this.deletePerson}
+                    updatePerson={this.updateName}/>
             );
         }
         return personList;

@@ -5,6 +5,7 @@ const Persons = (props) => {
 
     const clicked = props.clicked;
     const personList = props.persons;
+    const updatePerson = props.updatePerson;
 
     return (
         <div className="Persons">
@@ -16,7 +17,8 @@ const Persons = (props) => {
                                 key={person.id}
                                 name={person.name}
                                 age={person.age}
-                                clicked={() => clicked(person.id)}/>
+                                clicked={() => clicked(person.id)}
+                                updatePerson={event => updatePerson(event, person.id)}/>
                         );
                     }
                 )
