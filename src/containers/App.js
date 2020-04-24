@@ -42,6 +42,7 @@ class App extends React.Component {
         <div className="App">
             <h1> {this.props.title} </h1>
             <Cockpit
+                toggleValue={this.state.toggleValue}
                 toggle={this.togglePersons}/>
             {this.preparePersonList()}
         </div>
