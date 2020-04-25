@@ -38,16 +38,6 @@ class App extends React.Component {
         this.setState({persons: personList});
     }
 
-    render = () => (
-        <div className="App">
-            <h1> {this.props.title} </h1>
-            <Cockpit
-                toggleValue={this.state.toggleValue}
-                toggle={this.togglePersons}/>
-            {this.preparePersonList()}
-        </div>
-    )
-
     preparePersonList = () => {
         let personList = null;
         if (this.state.toggleValue) {
@@ -60,6 +50,16 @@ class App extends React.Component {
         }
         return personList;
     }
+
+    render = () => (
+        <div className="App">
+            <h1> {this.props.title} </h1>
+            <Cockpit
+                toggleValue={this.state.toggleValue}
+                toggle={this.togglePersons}/>
+            {this.preparePersonList()}
+        </div>
+    )
 }
 
 export default App;
