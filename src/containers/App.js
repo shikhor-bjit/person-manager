@@ -38,7 +38,7 @@ class App extends React.Component {
         this.setState({persons: personList});
     }
 
-    preparePersonList = () => {
+    preparePersonsComponent = () => {
         let personList = null;
         if (this.state.toggleValue) {
             personList = (
@@ -57,7 +57,7 @@ class App extends React.Component {
             <Cockpit
                 toggleValue={this.state.toggleValue}
                 toggle={this.togglePersons}/>
-            {this.preparePersonList()}
+            {this.preparePersonsComponent()}
         </div>
     )
 }
