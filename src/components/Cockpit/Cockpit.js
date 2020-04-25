@@ -1,5 +1,6 @@
+import './Cockpit.css';
 import React from "react";
-import style from './Cockpit.module.css'
+import style from './Cockpit.module.css';
 
 const Cockpit = (props) => {
     const toggle = props.toggle;
